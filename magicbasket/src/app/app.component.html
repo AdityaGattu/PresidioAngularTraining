@@ -1,0 +1,19 @@
+<h1>Welcome to Magic Basket...</h1>
+
+<input [(ngModel)]="name" id="basket">
+<button (click)="myFunc()" style="padding:10px;"></button>
+<div>{{name}}</div>
+<div *ngFor="let item of newbasketitems">
+  <!-- <li>{{item}}</li> -->
+  
+  <div *ngIf="(fruits.indexOf(item)===-1 && vegetables.indexOf(item)===-1)" style="color: green;">
+      <h4 style="color: red;">invalid item ...Item cannot be added to basket</h4>
+  </div>
+  <div *ngIf="(vegetables.indexOf(item)!==-1)" style="color: green;">
+       {{item}} <button (click)="remove(item)">delete</button>
+  </div>
+  <div *ngIf="(fruits.indexOf(item)!==-1)" style="color: yellow;font-style: italic;">
+    {{item}} <button (click)="remove(item)">delete</button>
+</div>
+
+</div>
