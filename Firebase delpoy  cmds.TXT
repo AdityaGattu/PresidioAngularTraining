@@ -1,0 +1,163 @@
+reference :https://www.positronx.io/deploy-angular-app-to-production-with-firebase-hosting/
+
+PS E:\Angular\magicbasket> npm install -g firebase-tools
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+C:\Users\ADITYA GATTU\AppData\Roaming\npm\firebase -> C:\Users\ADITYA GATTU\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js
+
+> re2@1.16.0 install C:\Users\ADITYA GATTU\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\re2
+> install-from-cache --artifact build/Release/re2.node --host-var RE2_DOWNLOAD_MIRROR || npm run rebuild
+
+Trying https://github.com/uhop/node-re2/releases/download/1.16.0/win32-x64-72.br ...
+Writing to build/Release/re2.node ...
+Done.
+
+> protobufjs@6.11.2 postinstall C:\Users\ADITYA GATTU\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\protobufjs 
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.1 (node_modules\firebase-tools\node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ firebase-tools@9.12.1
+added 689 packages from 422 contributors in 80.586s
+PS E:\Angular\magicbasket> firebase login
+i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+
+? Allow Firebase to collect CLI usage and error reporting information? Yes
+i  To change your data collection preference at any time, run `firebase logout` and log in again.
+
+https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=118934970&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+
+Waiting for authentication...
+
++  Success! Logged in as gattuaditya@gmail.com
+PS E:\Angular\magicbasket> firebase init
+
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Angular\magicbasket
+
+? Are you ready to proceed? Yes
+? Which Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices. (Press <space> to select, <a> to toggle all, <i> to invert selection)
+
+Error: Must select at least one feature. Use SPACEBAR to select features, or provide a feature with firebase init [feature_name]
+PS E:\Angular\magicbasket> firebase init
+
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##      
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Angular\magicbasket
+
+? Are you ready to proceed? Yes
+? Which Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices. Hosting: Configure and deploy Firebase Hosting sites
+
+=== Project Setup
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add,
+but for now we'll just set up a default project.
+
+? Please select an option: Create a new project
+i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project.
+? Please specify a unique project id (warning: cannot be modified afterward) [6-30 characters]:
+ mymagicbasket
+? What would you like to call your project? (defaults to your project ID) basket
+√ Creating Google Cloud Platform project
+√ Adding Firebase resources to Google Cloud Platform project
+
+=== Your Firebase project is ready! ===
+
+Project information:
+   - Project ID: mymagicbasket
+   - Project Name: basket
+
+Firebase console is available at
+https://console.firebase.google.com/project/mymagicbasket/overview
+i  Using project mymagicbasket (basket)
+
+=== Hosting Setup
+
+Your public directory is the folder (relative to your project directory) that
+will contain Hosting assets to be uploaded with firebase deploy. If you
+have a build process for your assets, use your build's output directory.
+
+? What do you want to use as your public directory? dist/magicbasket
+? Configure as a single-page app (rewrite all urls to /index.html)? Yes
+? Set up automatic builds and deploys with GitHub? Yes
++  Wrote dist/magicbasket/index.html
+
+i  Detected a .git folder at E:\Angular
+i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store.
+
+Visit this URL on this device to log in:
+https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=919178286&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+
+Waiting for authentication...
+
++  Success! Logged into GitHub as AdityaGattu
+
+? For which GitHub repository would you like to set up a GitHub workflow? (format: user/repository) AdityaGattu/PresidioAngularTraining
+
++  Created service account github-action-373046383 with Firebase Hosting admin permissions.
++  Uploaded service account JSON to GitHub as secret FIREBASE_SERVICE_ACCOUNT_MYMAGICBASKET.
+i  You can manage your secrets at https://github.com/AdityaGattu/PresidioAngularTraining/settings/secrets.
+
+? Set up the workflow to run a build script before every deploy? No
+
++  Created workflow file E:\Angular\.github/workflows/firebase-hosting-pull-request.yml
+? Set up automatic deployment to your site's live channel when a PR is merged? (Y/n) y
+? Set up automatic deployment to your site's live channel when a PR is merged? Yes
+? What is the name of the GitHub branch associated with your site's live channel? n
+
++  Created workflow file E:\Angular\.github/workflows/firebase-hosting-merge.yml
+
+i  Action required: Visit this URL to revoke authorization for the Firebase CLI GitHub OAuth App:
+https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+i  Action required: Push any new workflow file(s) to your repo
+
+i  Writing configuration info to firebase.json...
+i  Writing project information to .firebaserc...
+
++  Firebase initialization complete!
+PS E:\Angular\magicbasket> ng build --prod --aot
+Option "--prod" is deprecated: No need to use this option as this builder defaults to configuration "production".
+✔ Browser application bundle generation complete.
+✔ Copying assets complete.
+✔ Index html generation complete.
+
+main.23f17806824824e3e6b7.js      | main          | 147.64 kB
+polyfills.f12f89776053c7c49b54.js | polyfills     |  35.95 kB
+runtime.cd87be66cc697328a8ff.js   | runtime       |   1.00 kB
+styles.31d6cfe0d16ae931b73c.css   | styles        |   0 bytes
+
+                                  | Initial Total | 184.59 kB
+
+Build at: 2021-06-02T18:25:51.235Z - Hash: 549091038e8b724d2e6a - Time: 23817ms
+PS E:\Angular\magicbasket> firebase deploy
+
+=== Deploying to 'mymagicbasket'...
+
+i  deploying hosting
+i  hosting[mymagicbasket]: beginning deploy...
+i  hosting[mymagicbasket]: found 7 files in dist/magicbasket
++  hosting[mymagicbasket]: file upload complete
+i  hosting[mymagicbasket]: finalizing version...
++  hosting[mymagicbasket]: version finalized
+i  hosting[mymagicbasket]: releasing new version...
++  hosting[mymagicbasket]: release complete
+
++  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/mymagicbasket/overview
+Hosting URL: https://mymagicbasket.web.app
+PS E:\Angular\magicbasket> 
