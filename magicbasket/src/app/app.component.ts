@@ -10,8 +10,8 @@ export class AppComponent {
   name: string = "Enter Item to basket..";
   in: boolean = true;
   // basketitems: string[]=['mangoes','apples','bananas','grapes'];
-  fruits: string[]=['mango','apple','grapes','banana'];
-  vegetables: string[]=['tomato','carrot','beetroot','onion'];
+  fruits: string[]=['mango','apple','grapes','banana','orange'];
+  vegetables: string[]=['tomato','carrot','beetroot','onion','cucumber'];
   newbasketitems: string[]=[];
   delitem: string = "";
 

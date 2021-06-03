@@ -18,6 +18,42 @@ input {
     float: left;
   }
 
+.half1{
+    float:left;
+    width: 50%;
+}
+.half2{
+    background-color: black;
+    float: right;
+    width:50%;
+    height: 100vh;
+}
+
+.half2 .text-1{
+    margin-top: 27%;
+    margin-left: 10%;
+    color: white;
+    float: left;
+}
+
+.half2 .text-1{
+    color: white;
+    font-size: 20px;
+}
+
+
+.half2 .text-2{
+    color: yellow;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+
+.half2 .text-3{
+    color: greenyellow;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
 
 .navbar{
     position: fixed;
@@ -65,7 +101,7 @@ input {
 }
 
 .fruits{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding-top: 10px;
     color: yellow;
     font-weight: 500;
@@ -76,7 +112,7 @@ input {
 }
 
 .vegetables{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding-top: 10px;
     color:lightgreen;
     font-weight: 500;
@@ -87,20 +123,20 @@ input {
 
 .right{
     float: right;
-    margin-left: 260px;
+    margin-left: 150px;
 }
 
 .home{
     display: flex;
     background-color: black;
-    height:93.5vh;
+    height:100vh;
     color: white;
     min-height: 500px;
     font-family: 'Ubuntu', sans-serif;
 }
 
 .home .max-width{
-    margin: 150px 0 auto 200px;
+    margin: 200px 0 auto 200px;
 }
 
 
