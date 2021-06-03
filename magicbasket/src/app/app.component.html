@@ -21,18 +21,25 @@
 <div class="clear"></div>
 <div class="text-4 line">{{name}}</div>
 
+
+
+
+<div class="heading" >
+  Items in Basket :
+</div>  
 <div *ngFor="let item of newbasketitems" >
-  <!-- <li>{{item}}</li> -->
-  
-  <div *ngIf="(fruits.indexOf(item)===-1 && vegetables.indexOf(item)===-1)" style="color: green;">
-      <h4 style="color: red;">invalid item ...Item cannot be added to basket</h4>
+  <div *ngIf="(fruits.indexOf(item)===-1 && vegetables.indexOf(item)===-1)">
+      <!-- <h4 style="color: red;">invalid item ...Item cannot be added to basket</h4> -->
   </div>
   <div *ngIf="(vegetables.indexOf(item)!==-1)" class="vegetables">
-       {{item}} <button (click)="remove(item)" class="btn btn-danger right">delete</button>
+       {{item}} is a vegetable
+       <button (click)="remove(item)" class="btn btn-danger right">delete</button>
   </div>
   <div *ngIf="(fruits.indexOf(item)!==-1)" class="fruits">
-    {{item}} <button (click)="remove(item)" class="btn btn-danger right">delete</button>
+    {{item}} is a fruit
+    <button (click)="remove(item)" class="btn btn-danger right">delete</button>
   </div>
+
 
 </div>
 

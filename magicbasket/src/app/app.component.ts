@@ -9,15 +9,16 @@ export class AppComponent {
   title = 'magicbasket';
   name: string = "Enter Item to basket..";
   in: boolean = true;
-  basketitems: string[]=['mangoes','apples','bananas','grapes'];
+  // basketitems: string[]=['mangoes','apples','bananas','grapes'];
   fruits: string[]=['mango','apple','grapes','banana'];
   vegetables: string[]=['tomato','carrot','beetroot','onion'];
   newbasketitems: string[]=[];
   delitem: string = "";
 
   myFunc(){
-    console.log("function called");
-    this.newbasketitems.push(this.name);
+    if(this.newbasketitems.indexOf(this.name)===-1){
+      this.newbasketitems.push(this.name);
+    }
   }
 
   remove(msg: string){
