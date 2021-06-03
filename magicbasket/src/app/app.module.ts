@@ -3,12 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ItemsComponent } from './items/items.component';
+import { BasketComponent } from './basket/basket.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ItemsComponent
+    BasketComponent,
+    CartComponent,
+
   ],
   imports: [
     BrowserModule,FormsModule

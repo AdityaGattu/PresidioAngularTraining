@@ -1,0 +1,65 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<nav class="navbar">
+  <div class="max-width">
+    <div class="logo"><a href="#">Magic<span>Basket.</span></a></div>
+  </div>
+</nav>  
+
+<div class="clear"></div>
+
+<section class="home half1" id="home">
+  <div class="max-width">
+    <div class="home-content">
+        
+  <app-cart></app-cart>
+
+        <div class="text-3">Welcome to <span> Magic basket</span> </div>
+<input [(ngModel)]="name" id="basket">
+<button (click)="myFunc()" [(ngModel)]="curr_count"  ngDefaultControl class="btn btn-danger mybtn" >add to basket</button>
+<div class="clear"></div>
+<div class="text-4 line">{{name}}</div>
+
+
+<div class="heading" >
+  Items in Basket :
+</div>  
+<div *ngFor="let item of newbasketitems" >
+  <div *ngIf="(vegetables.indexOf(item)!==-1)" class="vegetables">
+       {{item | uppercase }} is a vegetable
+       <button (click)="remove(item)" class="btn btn-danger right">delete</button>
+  </div>
+  <div *ngIf="(fruits.indexOf(item)!==-1)" class="fruits">
+    {{item | uppercase}} is a fruit
+    <button (click)="remove(item)" class="btn btn-danger right">delete</button>
+  </div>
+</div>
+
+  </div>
+  </div>
+</section>
+
+<div class="half2">
+  <div class="text-1">
+    <h1 class="text-2">Fruits List :</h1>
+    <li>apple</li>
+    <li>mango</li>
+    <li>orange</li>
+    <li>banana</li>
+    <li>grapes</li>
+  </div>
+  
+  <div class="text-1">
+    <h1 class="text-3">Vegetables List :</h1>
+    <li>tomato</li>
+    <li>carrot</li>
+    <li>beetroot</li>
+    <li>onion</li>
+    <li>cucumber</li>    
+  </div>
+  </div>
+
+
