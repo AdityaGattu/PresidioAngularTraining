@@ -29,11 +29,11 @@
 </div>  
 <div *ngFor="let item of newbasketitems" >
   <div *ngIf="(vegetables.indexOf(item)!==-1)" class="vegetables">
-       {{item | uppercase }} is a vegetable
+       {{item}} - {{ "vegetable" | uppercase}}
        <button (click)="remove(item)" class="btn btn-danger right">delete</button>
   </div>
   <div *ngIf="(fruits.indexOf(item)!==-1)" class="fruits">
-    {{item | uppercase}} is a fruit
+    {{item}} - {{ "fruit" | uppercase}}
     <button (click)="remove(item)" class="btn btn-danger right">delete</button>
   </div>
 </div>
